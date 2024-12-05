@@ -1,12 +1,13 @@
-import express, { Request, Response, Router } from 'express';
-
-const router: Router = express.Router();
-
-router.get('/', (req: Request, res: Response) => {
-  res.send('Olá, DEV!');
-});
+import express from 'express';
 
 const server = express();
-server.use(router);
+
+interface Teste{
+  
+} 
+
+server.get('/', (_, res) => {
+  return res.send('Olá, DEV!');
+});
 
 export { server };
